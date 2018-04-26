@@ -16,6 +16,8 @@
 		5E212BAE208C3C7100746313 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E212BAD208C3C7100746313 /* Data.swift */; };
 		5E212BB1208C3CCE00746313 /* PersonCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E212BB0208C3CCE00746313 /* PersonCells.swift */; };
 		5E212BB3208C3ED400746313 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E212BB2208C3ED400746313 /* Person.swift */; };
+		5EDDD27220916F7C00754234 /* PersonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDD27120916F7C00754234 /* PersonGroup.swift */; };
+		5EDDD27420917F2B00754234 /* Database.json in Resources */ = {isa = PBXBuildFile; fileRef = 5EDDD27320917F2B00754234 /* Database.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		5E212BAD208C3C7100746313 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		5E212BB0208C3CCE00746313 /* PersonCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCells.swift; sourceTree = "<group>"; };
 		5E212BB2208C3ED400746313 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		5EDDD27120916F7C00754234 /* PersonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonGroup.swift; sourceTree = "<group>"; };
+		5EDDD27320917F2B00754234 /* Database.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Database.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 				5E212BAC208C3C4500746313 /* Model */,
 				5E212BA9208C3BBB00746313 /* ViewController */,
 				5E212BAB208C3C0800746313 /* View */,
+				5EDDD27320917F2B00754234 /* Database.json */,
 			);
 			path = StackOverflow;
 			sourceTree = "<group>";
@@ -104,6 +109,7 @@
 			children = (
 				5E212BAD208C3C7100746313 /* Data.swift */,
 				5E212BB2208C3ED400746313 /* Person.swift */,
+				5EDDD27120916F7C00754234 /* PersonGroup.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,6 +182,7 @@
 			files = (
 				5E212B9E208C3A8000746313 /* LaunchScreen.storyboard in Resources */,
 				5E212B9B208C3A8000746313 /* Assets.xcassets in Resources */,
+				5EDDD27420917F2B00754234 /* Database.json in Resources */,
 				5E212B96208C3A7E00746313 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,6 +197,7 @@
 				5E212BA6208C3AF400746313 /* CollectionViewController.swift in Sources */,
 				5E212BAE208C3C7100746313 /* Data.swift in Sources */,
 				5E212B93208C3A7E00746313 /* TableViewController.swift in Sources */,
+				5EDDD27220916F7C00754234 /* PersonGroup.swift in Sources */,
 				5E212BB3208C3ED400746313 /* Person.swift in Sources */,
 				5E212B91208C3A7E00746313 /* AppDelegate.swift in Sources */,
 				5E212BB1208C3CCE00746313 /* PersonCells.swift in Sources */,

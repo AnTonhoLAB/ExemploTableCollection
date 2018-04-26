@@ -10,7 +10,8 @@ import Foundation
 
 struct Person{
     
+    var id: Int!
     var name: String!
     var description: String!
-    
+    var age: Int!
 }
