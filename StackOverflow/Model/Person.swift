@@ -8,10 +8,18 @@
 
 import Foundation
 
-struct Person{
+struct Person: Decodable{
     
     var id: Int!
     var name: String!
     var description: String!
     var age: Int!
+    
+    init(name: String, description: String) {
+        
+    }
+    
+    init() {
+        
+    }
 }

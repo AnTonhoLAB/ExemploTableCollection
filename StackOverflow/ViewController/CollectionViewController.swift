@@ -16,8 +16,8 @@ class CollectionViewController: UIViewController{
         
         self.personCollectionView.dataSource = self
         self.personCollectionView.delegate = self
+        
     }
-    
 }
 
 extension CollectionViewController: UICollectionViewDataSource, UICollectionViewDelegate{
@@ -33,9 +33,5 @@ extension CollectionViewController: UICollectionViewDataSource, UICollectionView
         
         return pCell
     }
-    
-    
-    
-    
 }
 

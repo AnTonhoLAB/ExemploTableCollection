@@ -18,6 +18,7 @@
 		5E212BB3208C3ED400746313 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E212BB2208C3ED400746313 /* Person.swift */; };
 		5EDDD27220916F7C00754234 /* PersonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDD27120916F7C00754234 /* PersonGroup.swift */; };
 		5EDDD27420917F2B00754234 /* Database.json in Resources */ = {isa = PBXBuildFile; fileRef = 5EDDD27320917F2B00754234 /* Database.json */; };
+		5EDDD2772091F6F300754234 /* DBRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDD2762091F6F300754234 /* DBRequests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		5E212BB2208C3ED400746313 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		5EDDD27120916F7C00754234 /* PersonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonGroup.swift; sourceTree = "<group>"; };
 		5EDDD27320917F2B00754234 /* Database.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Database.json; sourceTree = "<group>"; };
+		5EDDD2762091F6F300754234 /* DBRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBRequests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				5E212BAC208C3C4500746313 /* Model */,
 				5E212BA9208C3BBB00746313 /* ViewController */,
 				5E212BAB208C3C0800746313 /* View */,
+				5EDDD2752091F69E00754234 /* DAO */,
 				5EDDD27320917F2B00754234 /* Database.json */,
 			);
 			path = StackOverflow;
@@ -120,6 +123,14 @@
 				5E212BB0208C3CCE00746313 /* PersonCells.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		5EDDD2752091F69E00754234 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				5EDDD2762091F6F300754234 /* DBRequests.swift */,
+			);
+			path = DAO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +210,7 @@
 				5E212B93208C3A7E00746313 /* TableViewController.swift in Sources */,
 				5EDDD27220916F7C00754234 /* PersonGroup.swift in Sources */,
 				5E212BB3208C3ED400746313 /* Person.swift in Sources */,
+				5EDDD2772091F6F300754234 /* DBRequests.swift in Sources */,
 				5E212B91208C3A7E00746313 /* AppDelegate.swift in Sources */,
 				5E212BB1208C3CCE00746313 /* PersonCells.swift in Sources */,
 			);
