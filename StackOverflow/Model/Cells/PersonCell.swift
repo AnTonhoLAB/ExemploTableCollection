@@ -21,13 +21,13 @@ class PersonTableCell: UITableViewCell{
     }
 }
 
-class PersonCollectionCell: UICollectionViewCell{
-    
-    var person: Person!
-    
-    @IBOutlet weak var lbName: UILabel!
-
-    func update(){
-        self.lbName.text = self.person.name
-    }
-}
+//class PersonCollectionCell: UICollectionViewCell{
+//    
+//    var person: Person!
+//    
+//    @IBOutlet weak var lbName: UILabel!
+//
+//    func update(){
+//        self.lbName.text = self.person.name
+//    }
+//}

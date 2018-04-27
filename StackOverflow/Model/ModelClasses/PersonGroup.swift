@@ -11,7 +11,7 @@ import Foundation
 struct PersonGroup: Decodable{
     
     var groupName: String!
-    var integrants: [Person]!
-//    var numberIntegrants: Int?
+    var integrants: [Person]?
+    var numberIntegrants: Int?
 
 }

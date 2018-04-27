@@ -8,27 +8,47 @@
 
 import UIKit
 
-class CollectionViewController: UIViewController{
+class CollectionViewController: UIViewController, LoadingDelegate{
+
+    
     
     @IBOutlet weak var personCollectionView: UICollectionView!
+    var groupProvider: GroupProvider!
     
     override func viewDidLoad() {
+        groupProvider = GroupProvider()
+        self.groupProvider.delegate = self
         
         self.personCollectionView.dataSource = self
         self.personCollectionView.delegate = self
         
     }
+    
+    func loadFinished() {
+        DispatchQueue.main.async {
+            self.personCollectionView.reloadData()
+        }
+    }
+    
+    func fail() {
+        
+    }
+
+}
+
+extension CollectionViewController{
+   
 }
 
 extension CollectionViewController: UICollectionViewDataSource, UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return DataManager.sharedInstance.getPersonsCount()
+        return groupProvider.groupCount()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let pCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PersonCollectionCell", for: indexPath) as! PersonCollectionCell
-        pCell.person = DataManager.sharedInstance.getPersons()[indexPath.row]
+        let pCell = collectionView.dequeueReusableCell(withReuseIdentifier: "GroupCell", for: indexPath) as! GroupCollectionCell
+        pCell.group = groupProvider.getGroup(with: indexPath.row)
         pCell.update()
         
         return pCell

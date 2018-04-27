@@ -13,22 +13,27 @@ enum RequestType: String{
     case GpInformations = "GroupInformations"
 }
 
+enum RequestPredicate: String{
+    case desc = "desc"
+    case nul = ""
+}
+
 class DBRequests {
     
     let domain = "http://demo7120007.mockable.io/"
     
     let url = URL(string: "http://www.stackoverflow.com")
     
-    func request <T>(_ requestType: RequestType, _ objct: T, completion: @escaping (T?, Error?) -> Void) where T: Decodable{
+    func request <T>(_ requestType: RequestType, _ objct: T,_ predicate: RequestPredicate? = .nul, completion: @escaping (T?, Error?) -> Void) where T: Decodable{
     
-        let url =  URL(string: domain + requestType.rawValue)
+        let url =  URL(string: domain + requestType.rawValue + predicate!.rawValue)
         
         let task = URLSession.shared.dataTask(with: url!) {(data, response, error) in
         
             do {
                 if let data = data{
                     let decodeObject = try JSONDecoder().decode(T.self, from: data)
-                    
+    
                     completion(decodeObject, nil)
                 }
             }catch{

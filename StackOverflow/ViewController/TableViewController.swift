@@ -8,9 +8,11 @@
 
 import UIKit
 
-class TableViewController: UIViewController {
-    
+class TableViewController: UIViewController{
+
     @IBOutlet weak var personsTableView: UITableView!
+   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,7 @@ class TableViewController: UIViewController {
     }
 
 }
+
 
 extension TableViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
