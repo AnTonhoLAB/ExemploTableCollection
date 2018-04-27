@@ -8,36 +8,31 @@
 
 import UIKit
 
-class CollectionViewController: UIViewController, LoadingDelegate{
+class CollectionViewController: UIViewController{
 
-    
-    
-    @IBOutlet weak var personCollectionView: UICollectionView!
+    @IBOutlet weak var groupCollectionView: UICollectionView!
     var groupProvider: GroupProvider!
     
     override func viewDidLoad() {
         groupProvider = GroupProvider()
         self.groupProvider.delegate = self
         
-        self.personCollectionView.dataSource = self
-        self.personCollectionView.delegate = self
+        self.groupCollectionView.dataSource = self
+        self.groupCollectionView.delegate = self
         
     }
-    
+}
+
+extension CollectionViewController: LoadingDelegate{
     func loadFinished() {
         DispatchQueue.main.async {
-            self.personCollectionView.reloadData()
+            self.groupCollectionView.reloadData()
         }
     }
     
     func fail() {
         
     }
-
-}
-
-extension CollectionViewController{
-   
 }
 
 extension CollectionViewController: UICollectionViewDataSource, UICollectionViewDelegate{

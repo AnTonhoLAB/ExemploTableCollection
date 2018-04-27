@@ -12,8 +12,6 @@ class TableViewController: UIViewController{
 
     @IBOutlet weak var personsTableView: UITableView!
    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,16 +24,15 @@ class TableViewController: UIViewController{
 
 }
 
-
 extension TableViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DataManager.sharedInstance.getPersonsCount()
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let pCell = tableView.dequeueReusableCell(withIdentifier: "PersonTableCell", for: indexPath) as! PersonTableCell
-        pCell.person = DataManager.sharedInstance.getPersons()[indexPath.row]
+//        pCell.person =
         pCell.update()
         return pCell
     }
