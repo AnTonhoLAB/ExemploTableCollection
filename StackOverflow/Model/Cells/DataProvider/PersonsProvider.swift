@@ -36,12 +36,13 @@ class PersonsProvider{
     
     func reload(){
         
-        
         dbRequest.request(groupName.replacingOccurrences(of: " ", with: ""), .nul, [Person](), .nul) { (persons, err) in
             if (err == nil){
                 if let persons = persons{
                     self.persons = persons
                 }
+            }else{
+                self.delegate?.fail()
             }
         }
     }

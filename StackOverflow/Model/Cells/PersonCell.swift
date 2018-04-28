@@ -20,14 +20,3 @@ class PersonTableCell: UITableViewCell{
         self.lbDescription.text = self.person.description
     }
 }
-
-//class PersonCollectionCell: UICollectionViewCell{
-//    
-//    var person: Person!
-//    
-//    @IBOutlet weak var lbName: UILabel!
-//
-//    func update(){
-//        self.lbName.text = self.person.name
-//    }
-//}

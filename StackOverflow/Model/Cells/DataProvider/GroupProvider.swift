@@ -20,7 +20,7 @@ class GroupProvider{
     
     private var groups: [PersonGroup] = [PersonGroup](){
         didSet{
-            delegate?.loadFinished()
+            self.delegate?.loadFinished()
         }
     }
    
@@ -33,13 +33,13 @@ class GroupProvider{
     }
     
     func reload(){
-        
-//        dbRequest.request(nil, .groups, <#T##objct: Decodable##Decodable#>, <#T##predicate: RequestPredicate?##RequestPredicate?#>, completion: <#T##(Decodable?, Error?) -> Void#>)
         dbRequest.request("", .groups, [PersonGroup](), .nul ) { (personGroups, err) in
             if (err == nil){
                 if let personGroups = personGroups{
                     self.groups = personGroups
                 }
+            }else{
+                self.delegate?.fail()
             }
         }
     }

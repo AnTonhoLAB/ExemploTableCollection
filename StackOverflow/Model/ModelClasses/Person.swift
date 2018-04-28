@@ -15,11 +15,11 @@ struct Person: Decodable{
     var description: String!
     var age: Int!
     
-    init(name: String, description: String) {
-        
-    }
-    
-    init() {
-        
-    }
+//    init(name: String, description: String) {
+//        
+//    }
+//    
+//    init() {
+//        
+//    }
 }

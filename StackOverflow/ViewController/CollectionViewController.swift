@@ -54,29 +54,8 @@ extension CollectionViewController: UICollectionViewDataSource, UICollectionView
         return pCell
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier:"toTableView" , sender: groupProvider.getGroup(with: indexPath.row))
     }
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
 

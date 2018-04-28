@@ -11,13 +11,15 @@ import UIKit
 class TableViewController: UIViewController{
 
     @IBOutlet weak var personsTableView: UITableView!
-   
+    @IBOutlet weak var loadingView: UIActivityIndicatorView!
+    
     var group: PersonGroup!
     var personProvider: PersonsProvider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        self.loadingView.startAnimating()
         self.personProvider = PersonsProvider(group.groupName)
         self.personProvider.delegate = self
         
@@ -26,6 +28,8 @@ class TableViewController: UIViewController{
         
         personsTableView.rowHeight = UITableViewAutomaticDimension
         personsTableView.estimatedRowHeight = 140
+        
+        self.personsTableView.tableFooterView = UIView(frame: .zero)
     }
 
 }
@@ -35,17 +39,27 @@ extension TableViewController: LoadingDelegate{
     func loadFinished() {
         DispatchQueue.main.async {
             self.personsTableView.reloadData()
+            self.loadingView.isHidden = true
         }
-    }
-    
-    func fail() {
         
     }
     
-    
+    func fail() {
+        DispatchQueue.main.async {
+            self.loadingView.isHidden = true
+        }
+        let alert = UIAlertController(title: "Ops!", message: "This list is empty", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            self.navigationController?.popViewController(animated: true)
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
 extension TableViewController: UITableViewDataSource, UITableViewDelegate {
+    
+
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return personProvider.personsCount()
     }
