@@ -18,7 +18,6 @@
 		5EAD740E2092234F00500A81 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD740D2092234F00500A81 /* GroupCell.swift */; };
 		5EAD74112092912500500A81 /* GroupProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD74102092912500500A81 /* GroupProvider.swift */; };
 		5EAD7413209293DE00500A81 /* LoadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD7412209293DE00500A81 /* LoadingDelegate.swift */; };
-		5EAD74172092957E00500A81 /* CVDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD74162092957E00500A81 /* CVDataSource.swift */; };
 		5EAD74192093EB2400500A81 /* PersonsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD74182093EB2400500A81 /* PersonsProvider.swift */; };
 		5EDDD27220916F7C00754234 /* PersonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDD27120916F7C00754234 /* PersonGroup.swift */; };
 		5EDDD27420917F2B00754234 /* DatabaseRepresentation.json in Resources */ = {isa = PBXBuildFile; fileRef = 5EDDD27320917F2B00754234 /* DatabaseRepresentation.json */; };
@@ -39,7 +38,6 @@
 		5EAD740D2092234F00500A81 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		5EAD74102092912500500A81 /* GroupProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProvider.swift; sourceTree = "<group>"; };
 		5EAD7412209293DE00500A81 /* LoadingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingDelegate.swift; sourceTree = "<group>"; };
-		5EAD74162092957E00500A81 /* CVDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVDataSource.swift; sourceTree = "<group>"; };
 		5EAD74182093EB2400500A81 /* PersonsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsProvider.swift; sourceTree = "<group>"; };
 		5EDDD27120916F7C00754234 /* PersonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonGroup.swift; sourceTree = "<group>"; };
 		5EDDD27320917F2B00754234 /* DatabaseRepresentation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DatabaseRepresentation.json; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 		5EAD74142092951F00500A81 /* Delegates & Datasources */ = {
 			isa = PBXGroup;
 			children = (
-				5EAD74162092957E00500A81 /* CVDataSource.swift */,
 			);
 			path = "Delegates & Datasources";
 			sourceTree = "<group>";
@@ -250,7 +247,6 @@
 				5EDDD27220916F7C00754234 /* PersonGroup.swift in Sources */,
 				5E212BB3208C3ED400746313 /* Person.swift in Sources */,
 				5EDDD2772091F6F300754234 /* DBRequests.swift in Sources */,
-				5EAD74172092957E00500A81 /* CVDataSource.swift in Sources */,
 				5E212B91208C3A7E00746313 /* AppDelegate.swift in Sources */,
 				5E212BB1208C3CCE00746313 /* PersonCell.swift in Sources */,
 			);
