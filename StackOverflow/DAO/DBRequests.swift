@@ -9,12 +9,11 @@
 import Foundation
 
 enum RequestType: String{
-    case allObjects = "CompleteGroups"
-    case GpInformations = "GroupInformations"
+    case groups = "groups"
+    case nul = ""
 }
 
 enum RequestPredicate: String{
-    case desc = "desc"
     case nul = ""
 }
 
@@ -22,9 +21,9 @@ class DBRequests {
     
     let domain = "http://demo7120007.mockable.io/"
     
-    func request <T>(_ requestType: RequestType, _ objct: T,_ predicate: RequestPredicate? = .nul, completion: @escaping (T?, Error?) -> Void) where T: Decodable{
+    func request <T>(_ withName: String? = "" ,_ requestType: RequestType? = .nul , _ objct: T,_ predicate: RequestPredicate? = .nul, completion: @escaping (T?, Error?) -> Void) where T: Decodable{
     
-        let url =  URL(string: domain + requestType.rawValue + predicate!.rawValue)
+        let url =  URL(string: domain + withName! + requestType!.rawValue + predicate!.rawValue)
         
         let task = URLSession.shared.dataTask(with: url!) {(data, response, error) in
         
@@ -35,6 +34,7 @@ class DBRequests {
                     completion(decodeObject, nil)
                 }
             }catch{
+                print(error)
                 completion(nil, error)
             }
         }

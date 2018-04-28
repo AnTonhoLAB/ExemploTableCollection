@@ -21,6 +21,12 @@ class CollectionViewController: UIViewController{
         self.groupCollectionView.delegate = self
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let TableviewController = segue.destination as! TableViewController
+        
+        TableviewController.group = sender as! PersonGroup
+    }
 }
 
 extension CollectionViewController: LoadingDelegate{
@@ -29,7 +35,6 @@ extension CollectionViewController: LoadingDelegate{
             self.groupCollectionView.reloadData()
         }
     }
-    
     func fail() {
         
     }
@@ -48,5 +53,30 @@ extension CollectionViewController: UICollectionViewDataSource, UICollectionView
         
         return pCell
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier:"toTableView" , sender: groupProvider.getGroup(with: indexPath.row))
+    }
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
 

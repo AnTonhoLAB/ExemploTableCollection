@@ -143,7 +143,6 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="lbName" destination="iyh-eO-Ony" id="iFJ-ZT-Ds5"/>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="TNV-0Z-2g3"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -161,6 +160,7 @@
                     <navigationItem key="navigationItem" id="AOS-kl-gLN"/>
                     <connections>
                         <outlet property="groupCollectionView" destination="Xyv-tj-SpW" id="CbZ-o6-DoC"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toTableView" id="qf3-9D-tzq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n2C-EG-Bo7" userLabel="First Responder" sceneMemberID="firstResponder"/>

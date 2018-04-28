@@ -19,6 +19,7 @@
 		5EAD74112092912500500A81 /* GroupProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD74102092912500500A81 /* GroupProvider.swift */; };
 		5EAD7413209293DE00500A81 /* LoadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD7412209293DE00500A81 /* LoadingDelegate.swift */; };
 		5EAD74172092957E00500A81 /* CVDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD74162092957E00500A81 /* CVDataSource.swift */; };
+		5EAD74192093EB2400500A81 /* PersonsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD74182093EB2400500A81 /* PersonsProvider.swift */; };
 		5EDDD27220916F7C00754234 /* PersonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDD27120916F7C00754234 /* PersonGroup.swift */; };
 		5EDDD27420917F2B00754234 /* DatabaseRepresentation.json in Resources */ = {isa = PBXBuildFile; fileRef = 5EDDD27320917F2B00754234 /* DatabaseRepresentation.json */; };
 		5EDDD2772091F6F300754234 /* DBRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDDD2762091F6F300754234 /* DBRequests.swift */; };
@@ -39,6 +40,7 @@
 		5EAD74102092912500500A81 /* GroupProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProvider.swift; sourceTree = "<group>"; };
 		5EAD7412209293DE00500A81 /* LoadingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingDelegate.swift; sourceTree = "<group>"; };
 		5EAD74162092957E00500A81 /* CVDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVDataSource.swift; sourceTree = "<group>"; };
+		5EAD74182093EB2400500A81 /* PersonsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsProvider.swift; sourceTree = "<group>"; };
 		5EDDD27120916F7C00754234 /* PersonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonGroup.swift; sourceTree = "<group>"; };
 		5EDDD27320917F2B00754234 /* DatabaseRepresentation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DatabaseRepresentation.json; sourceTree = "<group>"; };
 		5EDDD2762091F6F300754234 /* DBRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBRequests.swift; sourceTree = "<group>"; };
@@ -88,8 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				5EAD74142092951F00500A81 /* Delegates & Datasources */,
-				5E212B92208C3A7E00746313 /* TableViewController.swift */,
 				5E212BA5208C3AF400746313 /* CollectionViewController.swift */,
+				5E212B92208C3A7E00746313 /* TableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -126,8 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				5EAD740F2092366800500A81 /* DataProvider */,
-				5E212BB0208C3CCE00746313 /* PersonCell.swift */,
 				5EAD740D2092234F00500A81 /* GroupCell.swift */,
+				5E212BB0208C3CCE00746313 /* PersonCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -137,6 +139,7 @@
 			children = (
 				5EAD7412209293DE00500A81 /* LoadingDelegate.swift */,
 				5EAD74102092912500500A81 /* GroupProvider.swift */,
+				5EAD74182093EB2400500A81 /* PersonsProvider.swift */,
 			);
 			path = DataProvider;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EAD740E2092234F00500A81 /* GroupCell.swift in Sources */,
+				5EAD74192093EB2400500A81 /* PersonsProvider.swift in Sources */,
 				5E212BA6208C3AF400746313 /* CollectionViewController.swift in Sources */,
 				5EAD7413209293DE00500A81 /* LoadingDelegate.swift in Sources */,
 				5E212B93208C3A7E00746313 /* TableViewController.swift in Sources */,
