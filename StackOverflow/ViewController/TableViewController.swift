@@ -48,7 +48,7 @@ extension TableViewController: LoadingDelegate{
         DispatchQueue.main.async {
             self.loadingView.isHidden = true
         }
-        let alert = UIAlertController(title: "Ops!", message: "This list is empty", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Ops!", message: "This group is empty", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             self.navigationController?.popViewController(animated: true)
         }))

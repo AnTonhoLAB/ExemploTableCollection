@@ -21,6 +21,7 @@ class CollectionViewController: UIViewController{
         self.groupCollectionView.delegate = self
         
     }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let TableviewController = segue.destination as! TableViewController
